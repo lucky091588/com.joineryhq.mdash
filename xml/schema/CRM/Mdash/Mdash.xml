@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+
+<table>
+  <base>CRM/Mdash</base>
+  <class>Mdash</class>
+  <name>civicrm_mdash</name>
+  <comment>Additional dashboards</comment>
+  <log>true</log>
+  <field>
+    <name>id</name>
+    <type>int unsigned</type>
+    <required>true</required>
+    <comment>Unique Mdash ID</comment>
+  </field>
+  <primaryKey>
+    <name>id</name>
+    <autoincrement>true</autoincrement>
+  </primaryKey>
+  <field>
+    <name>title</name>
+    <type>varchar</type>
+    <length>64</length>
+  </field>
+  <field>
+    <name>created_by</name>
+    <type>int unsigned</type>
+    <comment>FK to Contact</comment>
+  </field>
+  <foreignKey>
+    <name>created_by</name>
+    <table>civicrm_contact</table>
+    <key>id</key>
+    <onDelete>CASCADE</onDelete>
+  </foreignKey>
+  <field>
+    <name>is_active</name>
+    <type>boolean</type>
+    <default>0</default>
+  </field>
+  <field>
+    <name>permission</name>
+    <type>varchar</type>
+    <title>Dashlet Permission</title>
+    <length>255</length>
+    <comment>Permission for the dashlet</comment>
+    <serialize>COMMA</serialize>
+  </field>
+  <field>
+    <name>permission_operator</name>
+    <type>varchar</type>
+    <title>Dashlet Permission Operator</title>
+    <length>3</length>
+    <comment>Permission Operator</comment>
+  </field>
+</table>
