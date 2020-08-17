@@ -6,6 +6,38 @@ use CRM_Mdash_ExtensionUtil as E;
 // phpcs:enable
 
 /**
+ * Implements hook_civicrm_pageRun().
+ *
+ * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_pageRun/
+ */
+function mdash_civicrm_pageRun(&$page) {
+  $pageName = $page->getVar('_name');
+  if($pageName === 'CRM_Contact_Page_DashBoard') {
+
+  }
+}
+
+/**
+ * Implements hook_civicrm_dashboard().
+ *
+ * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_dashboard/
+ */
+// function mdash_civicrm_dashboard($contactID, &$contentPlacement) {
+//   // REPLACE Activity Listing with custom content
+//   $contentPlacement = 3;
+//   $content = array(
+//     'Custom Content' => "Here is some custom content: $contactID",
+//     'Custom Table' => "
+//       <table>
+//       <tr><th>Contact Name</th><th>Date</th></tr>
+//       <tr><td>Foo</td><td>Bar</td></tr>
+//       <tr><td>Goo</td><td>Tar</td></tr>
+//       </table>",
+//   );
+//   return $content;
+// }
+
+/**
  * Implements hook_civicrm_config().
  *
  * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_config/

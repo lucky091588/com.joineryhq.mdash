@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<menu>
+  <item>
+    <path>civicrm/dashboard/mdash</path>
+    <page_callback>CRM_Mdash_Page_Mdash</page_callback>
+    <title>Mdash</title>
+    <access_arguments>access CiviCRM</access_arguments>
+  </item>
+  <item>
+    <path>civicrm/dashboard/mdash/dashlet</path>
+    <page_callback>CRM_Mdash_Page_MdashDashlet</page_callback>
+    <title>MdashDashlet</title>
+    <access_arguments>access CiviCRM</access_arguments>
+  </item>
+</menu>
