@@ -24,7 +24,7 @@ function _civicrm_api3_mdash_create_spec(&$spec) {
  * @throws API_Exception
  */
 function civicrm_api3_mdash_create($params) {
-  return _civicrm_api3_basic_create(_civicrm_api3_get_BAO(__FUNCTION__), $params, Mdash);
+  return _civicrm_api3_basic_create(_civicrm_api3_get_BAO(__FUNCTION__), $params, 'Mdash');
 }
 
 /**
@@ -52,5 +52,5 @@ function civicrm_api3_mdash_delete($params) {
  * @throws API_Exception
  */
 function civicrm_api3_mdash_get($params) {
-  return _civicrm_api3_basic_get(_civicrm_api3_get_BAO(__FUNCTION__), $params, FALSE, Mdash);
+  return _civicrm_api3_basic_get(_civicrm_api3_get_BAO(__FUNCTION__), $params, FALSE, 'Mdash');
 }

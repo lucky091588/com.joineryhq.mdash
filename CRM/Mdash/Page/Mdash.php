@@ -9,8 +9,8 @@ class CRM_Mdash_Page_Mdash extends CRM_Core_Page {
     $resources->addScriptFile('civicrm', 'js/jquery/jquery.dashboard.js', 0, 'html-header', FALSE);
     $resources->addStyleFile('civicrm', 'css/dashboard.css');
     // $this->assign('contactDashlets', CRM_Core_BAO_Dashboard::getContactDashletsForJS());
-    $mdashDetails = CRM_Mdash_BAO_MdashDashboard::getMdashDetails($_GET['mdid']);
-    $this->assign('contactDashlets', CRM_Mdash_BAO_MdashDashboard::getMdashDashletForJS($_GET['mdid']));
+    $mdashDetails = CRM_Mdash_BAO_Mdash::getMdashDetails($_GET['mdid']);
+    $this->assign('contactDashlets', CRM_Mdash_BAO_MdashDashboard::getMdashDashboardDashlet($_GET['mdid']));
 
     CRM_Utils_System::setTitle(ts($mdashDetails[$_GET['mdid']]['title']));
     $contactID = CRM_Core_Session::getLoggedInContactID();
