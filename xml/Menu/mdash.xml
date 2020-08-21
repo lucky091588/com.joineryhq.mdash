@@ -7,9 +7,15 @@
     <access_arguments>access CiviCRM</access_arguments>
   </item>
   <item>
-    <path>civicrm/dashboard/mdash/dashlet</path>
-    <page_callback>CRM_Mdash_Page_MdashDashlet</page_callback>
-    <title>MdashDashlet</title>
+    <path>civicrm/dashboard/mdashboarddashlet</path>
+    <page_callback>CRM_Mdash_Page_MdashboardDashlet</page_callback>
+    <title>MdashboardDashlet</title>
+    <access_arguments>access CiviCRM</access_arguments>
+  </item>
+  <item>
+    <path>civicrm/dashboard/mdashlet</path>
+    <page_callback>CRM_Mdash_Page_Mdashlet</page_callback>
+    <title>Mdashlet</title>
     <access_arguments>access CiviCRM</access_arguments>
   </item>
 </menu>
